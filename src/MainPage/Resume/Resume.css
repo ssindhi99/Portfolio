@@ -1,0 +1,290 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Prata&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.work-sans {
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.resume-section {
+  background-image: url("https://i.ibb.co/Hd8BBfC/Black-and-gold-abstract-Design-Art-background-aesthetic-529-480x960.jpg");
+
+  background-attachment: fixed;
+  background-position: center; 
+  font-family: 'Prata', serif;
+  color: #C5C2B6;
+  
+}
+
+.resume-card {
+
+  background-color: #1B1C1D;
+  padding: 2rem;
+  margin: 0% auto 1%;
+  max-width: 70%;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+.no-margin {
+  margin-bottom: 0;
+}
+
+.resume-card h1 {
+  font-size: 2rem;
+  color: #d4af37;
+  background: linear-gradient(90deg, #d4af37, #e6c88b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+  font-family: "Prata", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.resume-card h2 {
+  font-size: 1.3rem;
+  color: #C5C2B6;
+  margin-bottom: 0.5rem;
+  font-family: "Prata", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.resume-card p, .resume-subcard p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  
+}
+
+.resume-subcard {
+  background-color: #3A3B3C;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  max-width: 70%;
+}
+
+.resume-text p {
+  margin: 0.5rem 0;
+}
+
+/* Flex layout for skills section */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  width: 100%;
+}
+
+.skills-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #2A2B2C;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.skills-flex h3 {
+  color: white;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  font-family: "Prata", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.skills-flex p {
+  color: #C5C2B6;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.icon {
+  font-size: 2rem;
+  color: #d4af37;
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  
+  .skills-flex {
+    width: 30%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .resume-card h1 {
+    font-size: 2.5rem;
+  }
+  .resume-card p {
+    font-size: 1.1rem;
+  }
+}
+
+.resume-header {
+  width: 100%;
+  padding: 5% 20%;
+  background-image: url("https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=1420&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+background-position: center 60%;
+margin-bottom: 1%;
+color: #C5C2B6;
+
+}
+
+.resume-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.0); /* Adjust opacity as needed */
+  z-index: 1;
+  border-radius: inherit;
+}
+
+
+
+.resume-header h1 {
+  font-size: 3rem;
+  color: #d4af37;
+  background: linear-gradient(90deg, #d4af37, #e6c88b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 5% 0% 7%;
+  font-weight: 400;
+  position: relative;
+  z-index: 2;
+
+}
+
+.resume-header p {
+  position: relative;
+  z-index: 2;
+  color: #C5C2B6;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  padding: 0% 20% 10%;
+  background: linear-gradient(90deg, #f0e5c2, #c5c2b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+
+  /* Add subtle text shadows for a glowing effect */
+  text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.3), 
+               0px 0px 12px rgba(212, 175, 55, 0.5);
+
+
+}
+
+.resume-header {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.button-container {
+  display: flex;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+}
+
+.home-button, .download-button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.home-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.download-button {
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.home-button:hover, .download-button:hover {
+  opacity: 0.8;
+}
+
+.content-container {
+  margin-top: 60px; /* Add some space below the buttons */
+  text-align: center;
+
+}
+.content-container h1{
+  font-family: "Prata", serif;
+  font-weight: 400;
+  font-style: normal;
+
+}
+@media (max-width: 768px) {
+  .content-container h1 {
+    font-size: 1.8rem;
+  }
+  .resume-entry p {
+    text-align: left;
+  padding: 0%;  
+  }
+    
+  .resume-card {
+    margin-top: 4%;
+    max-width: 95%; 
+  }
+  .flex-container {
+    flex-direction: column;
+
+  }
+  .resume-subcard {
+    max-width: 100%;
+  }
+}
+
+
+
+.resume-entry p{
+  line-height: normal;
+  padding-left: 3%;
+}
+.resume-entry {
+margin-bottom: 3%;
+}
+
+
+

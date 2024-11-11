@@ -1,0 +1,125 @@
+// Colors and Backgrounds
+$navbg: #1a73e8;
+$navimgbg: linear-gradient(to right, #00d2ff, #3a7bd5);
+$bodybg-color: #308894;
+$bodyimgbg: linear-gradient(to bottom, #f4f6f7, #dfe4ea);
+$h1color: #2f3640;
+$h2color: #f39c12;
+$p-color: #7f8c8d;
+
+// Contact Page
+.contact-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+  background-image: $bodyimgbg;
+  color: $p-color;
+  height: 100vh;
+  align-items: center;
+  flex-wrap: wrap;
+
+  // For tablet devices
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    padding: 30px;
+    height: auto;
+  }
+
+  // For mobile devices
+  @media (max-width: 768px) {
+    padding: 20px;
+  }
+}
+
+.contact-info {
+  max-width: 40%;
+
+  @media (max-width: 1024px) {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: $h2color;
+
+    // Reduce heading size on smaller screens
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+
+    @media (max-width: 768px) {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+.contact-details p {
+  margin: 10px 0;
+  font-size: 1rem;
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+  }
+}
+
+.contact-form {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 40%;
+
+  @media (max-width: 1024px) {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2d3748;
+    color: white;
+    font-size: 1rem;
+
+    @media (max-width: 768px) {
+      padding: 8px;
+      font-size: 0.9rem;
+    }
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: #a0aec0;
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4c1d95;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #5b21b6;
+    }
+
+    @media (max-width: 768px) {
+      padding: 8px;
+      font-size: 0.9rem;
+    }
+  }
+}
