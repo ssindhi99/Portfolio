@@ -9,10 +9,25 @@ function AboutPage() {
         <div className="about-text">
           <h1>About Me</h1>
           <p>
-          I'm a front-end developer with a deep passion for coding and a commitment to constant growth. I began my coding journey in January 2023, immersing myself in React, Redux, HTML, and CSS, and I haven't stopped learning since. For me, coding is more than just a profession—it's a fulfilling challenge that I embrace every day. I find excitement in building engaging, user-friendly applications and continuously exploring new technologies to refine my skills. With each project, I strive to bring creativity, precision, and an eagerness to learn, aiming to deliver high-quality results that exceed expectations. I'm driven, adaptable, and eager to contribute to a dynamic team where I can make a meaningful impact.
+I am a passionate professional currently working as a Product Manager in a dynamic media company. I truly enjoy my job, where I get to strategize, lead, and drive impactful projects. In my free time, I indulge in website surfing, which has sparked a deep interest in coding and web development.
+          </p>
+
+                    <p>
+Driven by curiosity and a desire to challenge myself, I chose to learn JavaScript—one of the most in-demand and versatile programming languages. My learning journey began with mastering HTML and CSS, followed by JavaScript, and further advanced to building web applications using ReactJS and Redux.
 
 
           </p>
+
+                    <p>
+As a creative thinker, I find immense satisfaction in designing websites and applying logic to make them functional and engaging. Despite coming from a non-IT background, with a Master’s in Commerce, I am committed to growing as a front-end developer while continuing to thrive in my current role.
+
+          </p>
+                    <p>
+I am constantly seeking opportunities to enhance my skills and contribute meaningfully in both areas, blending my passion for technology with my expertise in product management.
+
+          </p>
+
+
         </div>
       </section>
       
