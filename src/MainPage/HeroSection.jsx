@@ -15,7 +15,7 @@ function HeroSection() {
 <strong>Welcome to my digital space! </strong> My journey combines a passion for web development with a focus on building seamless, user-friendly experiences.
           </p>
 <p>
-I specialize in crafting intuitive and responsive websites using modern technologies like ReactJS, Redux, and Vite.js. From designing sleek interfaces to implementing dynamic features, I enjoy turning ideas into functional and visually appealing web solutions.
+I specialize in crafting intuitive and responsive websites using modern technologies like ReactJS and Redux. From designing sleek interfaces to implementing dynamic features, I enjoy turning ideas into functional and visually appealing web solutions.
           </p>
 
           
