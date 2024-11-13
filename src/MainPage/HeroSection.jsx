@@ -12,9 +12,15 @@ function HeroSection() {
         </div>
         <div className="hero-paragraph">
           <p>
-            Skilled in React.js, Vite.js, and modern web technologies, focused on
-            creating responsive, user-friendly applications.
+<strong>Welcome to my digital space! </strong> My journey combines a passion for web development with a focus on building seamless, user-friendly experiences.
           </p>
+          <p>
+Feel free to explore my projects, learn more about my skills, or get in touch to collaborate. Together, we can create something remarkable—one line of code at a time!
+          </p>
+          <p>
+          </p>
+
+          
         </div>
         <div className="download-cv">
           <a href={pdfUrl} download>
