@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 function HeroSection() {
-  const pdfUrl = 'https://docs.google.com/document/d/1nrcctP1mayWMC6ZGdm-lbjUvkzV-JChj/export?format=pdf'; 
+  const pdfUrl = 'https://drive.google.com/uc?export=download&id=1Gb7bMiEvXlMVVOjTJQfAAQy6FLfuAcwl'; 
 
   return (
     <header className="hero-section">
@@ -12,20 +12,14 @@ function HeroSection() {
         </div>
         <div className="hero-paragraph">
           <p>
-<strong>Welcome to my digital space! </strong> My journey combines a passion for web development with a focus on building seamless, user-friendly experiences.
-          </p>
-<p>
-I specialize in crafting intuitive and responsive websites using modern technologies like ReactJS and Redux. From designing sleek interfaces to implementing dynamic features, I enjoy turning ideas into functional and visually appealing web solutions.
-          </p>
-
-          
-          <p>
-Feel free to explore my projects, learn more about my skills, or get in touch to collaborate. Together, we can create something remarkable—one line of code at a time!
+            <strong>Welcome to my digital space! </strong> My journey combines a passion for web development with a focus on building seamless, user-friendly experiences.
           </p>
           <p>
+            I specialize in crafting intuitive and responsive websites using modern technologies like ReactJS and Redux. From designing sleek interfaces to implementing dynamic features, I enjoy turning ideas into functional and visually appealing web solutions.
           </p>
-
-          
+          <p>
+            Feel free to explore my projects, learn more about my skills, or get in touch to collaborate. Together, we can create something remarkable—one line of code at a time!
+          </p>
         </div>
         <div className="download-cv">
           <a href={pdfUrl} download>
