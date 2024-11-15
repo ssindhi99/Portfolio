@@ -4,7 +4,7 @@ import './Resume.css';
 
 const HeaderSection = () => {
   
-  const pdfUrl = 'https://docs.google.com/document/d/1nrcctP1mayWMC6ZGdm-lbjUvkzV-JChj/export?format=pdf'; 
+  const pdfUrl = 'https://drive.google.com/uc?export=download&id=1Gb7bMiEvXlMVVOjTJQfAAQy6FLfuAcwl'; 
 
 
   return (
