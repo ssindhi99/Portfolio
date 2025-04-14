@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 function HeroSection() {
-  const pdfUrl = 'https://docs.google.com/document/d/1R7uDcWR902KBGitqqLZCvSpzknZTw1uL/edit?usp=sharing&ouid=103623162119097398124&rtpof=true&sd=true'; 
+  const pdfUrl = 'https://docs.google.com/document/d/1R7uDcWR902KBGitqqLZCvSpzknZTw1uL/export?format=pdf'; 
 
   return (
     <header className="hero-section">
