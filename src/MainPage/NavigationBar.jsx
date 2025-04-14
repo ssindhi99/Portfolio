@@ -30,7 +30,7 @@ function NavigationBar() {
               <li><Link to="/curriculum" onClick={closeMenu}>Curriculum Vitae</Link></li>
               <li><Link to="/Portfolio" onClick={closeMenu}>Projects</Link></li>
               <li><Link to="/Contact" onClick={closeMenu}>Contact Me</Link></li>
-              <li><Link to="/ContactMessage" onClick={closeMenu}>Contact Messages</Link></li>
+              
             </ul>
           </div>
         </nav>
