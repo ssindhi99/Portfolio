@@ -1,4 +1,5 @@
 import { useState } from "react";
+import WhatsAppButton from './WhatsAppButton';
 
 function HeroSection() {
   const pdfUrl = 'https://docs.google.com/document/d/1R7uDcWR902KBGitqqLZCvSpzknZTw1uL/export?format=pdf'; 
@@ -27,6 +28,8 @@ function HeroSection() {
           </a>
         </div>
       </div>
+                  {/* WhatsApp icon */}
+    <WhatsAppButton />
 
       <div className="image-container">
         <img src="https://i.ibb.co/k4dfqN7/Whats-App-Image-2024-11-11-at-00-09-36-2b8d1345.jpg" alt="Profile" />
