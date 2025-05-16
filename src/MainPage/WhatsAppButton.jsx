@@ -7,33 +7,47 @@ const WhatsAppButton = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [showButton, setShowButton] = useState(true);
 
-  
-  // Replace with your phone number (with country code, no + or 0)
-  const phoneNumber = '+917778827774';
-  const message = 'Let's build something great!';
-  
+  // Replace with your phone number (country code only, no + or 0)
+  const phoneNumber = '917778827774';
+  const message = "Let's build something great!";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
-  // Check if mobile device
+  // Check if device is mobile
   useEffect(() => {
-    const checkIfMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-    
-    checkIfMobile();
-    window.addEventListener('resize', checkIfMobile);
-    
-    return () => window.removeEventListener('resize', checkIfMobile);
+    if (typeof window !== 'undefined') {
+      const checkIfMobile = () => {
+        setIsMobile(window.innerWidth <= 768);
+      };
+
+      checkIfMobile();
+      window.addEventListener('resize', checkIfMobile);
+      return () => window.removeEventListener('resize', checkIfMobile);
+    }
   }, []);
 
-  // Base styles
+  // Add pulse animation to document head
+  useEffect(() => {
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes pulse {
+        0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+        70% { box-shadow: 0 0 0 12px rgba(37, 211, 102, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+      }
+    `;
+    document.head.appendChild(style);
+    return () => document.head.removeChild(style);
+  }, []);
+
+  if (!showButton) return null;
+
   const floatStyle = {
     position: 'fixed',
     width: isMobile ? '50px' : '60px',
     height: isMobile ? '50px' : '60px',
     bottom: isMobile ? '20px' : '30px',
     right: isMobile ? '15px' : '30px',
-    backgroundColor: '#25d366',
+    backgroundColor: isHovered ? '#128C7E' : '#25d366',
     color: '#FFF',
     borderRadius: '50%',
     textAlign: 'center',
@@ -47,12 +61,13 @@ const WhatsAppButton = () => {
     transition: 'all 0.3s ease',
     transform: isHovered ? 'scale(1.1)' : 'scale(1)',
     border: '2px solid white',
-    overflow: 'hidden'
+    overflow: 'hidden',
+    animation: 'pulse 2s infinite',
   };
 
   const iconStyle = {
     transition: 'transform 0.3s ease',
-    transform: isHovered ? 'scale(1.1)' : 'scale(1)'
+    transform: isHovered ? 'scale(1.1)' : 'scale(1)',
   };
 
   const closeButtonStyle = {
@@ -67,30 +82,22 @@ const WhatsAppButton = () => {
     alignItems: 'center',
     justifyContent: 'center',
     boxShadow: '0 2px 4px rgba(0,0,0,0.2)',
-    cursor: 'pointer'
+    cursor: 'pointer',
+    zIndex: 1001,
   };
 
-  // Add pulse animation to document head
-  useEffect(() => {
-    const style = document.createElement('style');
-    style.textContent = `
-      @keyframes pulse {
-        0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-        70% { box-shadow: 0 0 0 12px rgba(37, 211, 102, 0); }
-        100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-      }
-    `;
-    document.head.appendChild(style);
-
-    return () => document.head.removeChild(style);
-  }, []);
-
-  if (!showButton) return null;
-
   return (
-    <div style={{ position: 'fixed', bottom: isMobile ? '20px' : '30px', right: isMobile ? '15px' : '30px', zIndex: 1000 }}>
+    <div
+      style={{
+        position: 'fixed',
+        bottom: isMobile ? '20px' : '30px',
+        right: isMobile ? '15px' : '30px',
+        zIndex: 1000,
+      }}
+    >
+      {/* Tooltip Message (desktop only) */}
       {!isMobile && (
-        <div 
+        <div
           style={{
             position: 'absolute',
             right: isMobile ? '65px' : '75px',
@@ -103,41 +110,39 @@ const WhatsAppButton = () => {
             transition: 'all 0.3s ease',
             whiteSpace: 'nowrap',
             fontSize: '14px',
-            color: '#333'
+            color: '#333',
           }}
         >
-          Let's build something great! 
+          Let's build something great!
         </div>
       )}
-      
-      <a
-        href={whatsappUrl}
-        style={{
-          ...floatStyle,
-          animation: 'pulse 2s infinite',
-          backgroundColor: isHovered ? '#128C7E' : '#25d366'
-        }}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Chat on WhatsApp"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-      >
-        <FaWhatsapp style={iconStyle} />
-      </a>
-      
-      {isMobile && (
-        <div 
-          style={closeButtonStyle}
-          onClick={(e) => {
-            e.preventDefault();
-            setShowButton(false);
-          }}
-          aria-label="Close WhatsApp button"
+
+      <div style={{ position: 'relative' }}>
+        <a
+          href={whatsappUrl}
+          style={floatStyle}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Chat on WhatsApp"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
         >
-          <IoMdClose size={12} color="#25d366" />
-        </div>
-      )}
+          <FaWhatsapp style={iconStyle} />
+        </a>
+
+        {isMobile && (
+          <div
+            style={closeButtonStyle}
+            onClick={(e) => {
+              e.preventDefault();
+              setShowButton(false);
+            }}
+            aria-label="Close WhatsApp button"
+          >
+            <IoMdClose size={12} color="#25d366" />
+          </div>
+        )}
+      </div>
     </div>
   );
 };
