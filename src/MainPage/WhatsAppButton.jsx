@@ -105,7 +105,7 @@ const WhatsAppButton = () => {
             color: '#333'
           }}
         >
-          Need help? Chat with us
+          Let's build something great!
         </div>
       )}
       
