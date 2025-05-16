@@ -7,9 +7,13 @@ const WhatsAppButton = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [showButton, setShowButton] = useState(true);
 
-  // Replace with your phone number (country code only, no + or 0)
+  // Phone number with country code (no + or 0)
   const phoneNumber = '917778827774';
-  const message = "Let's build something great!";
+  
+  // Dynamic message based on device
+  const message = `Hello Sonu! I saw your portfolio and I'm interested in discussing ${
+    isMobile ? 'Hello Sonu! I have a project idea that aligns with your skills. Let's discuss how we can work together!`;
+  
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   // Check if device is mobile
@@ -111,9 +115,10 @@ const WhatsAppButton = () => {
             whiteSpace: 'nowrap',
             fontSize: '14px',
             color: '#333',
+            fontWeight: '500',
           }}
         >
-          Let's build something great!
+          Let's discuss your project!
         </div>
       )}
 
