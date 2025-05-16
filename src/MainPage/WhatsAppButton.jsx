@@ -9,7 +9,7 @@ const WhatsAppButton = () => {
 
   // Replace with your phone number (with country code, no + or 0)
   const phoneNumber = '+917778827774';
-  const message = 'Hello! I have a question about your services.';
+  const message = 'Let's build something great!';
   
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
