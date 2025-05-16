@@ -33,8 +33,7 @@ function HeroSection() {
       <div className="image-container">
         <img src="https://i.ibb.co/k4dfqN7/Whats-App-Image-2024-11-11-at-00-09-36-2b8d1345.jpg" alt="Profile" />
       </div>
-      {/* WhatsApp icon */}
-    <WhatsAppButton />
+      
     </header>
   );
 }
