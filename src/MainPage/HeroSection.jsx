@@ -1,5 +1,4 @@
 import { useState } from "react";
-import WhatsAppButton from './WhatsAppButton';
 
 
 function HeroSection() {
@@ -30,7 +29,6 @@ function HeroSection() {
         </div>
       </div>
       
-                             <WhatsAppButton />
  
 
       <div className="image-container">
